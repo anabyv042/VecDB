@@ -33,6 +33,7 @@ enable_testing()
 # --- Test executable ---
 add_executable(tests
     tests/test_query.cpp
+    tests/test_storage.cpp
     src/query.cpp
     src/storage.cpp
 )

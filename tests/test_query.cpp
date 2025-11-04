@@ -3,7 +3,8 @@
 
 TEST(QueryTest, Insert)
 {
-    Query q;
+    Storage s(1);
+    Query q(s);
     std::string id = "test_id";
     std::vector<float> vector = {1.0f};
     q.insert(id, vector);
@@ -14,7 +15,8 @@ TEST(QueryTest, Insert)
 
 TEST(QueryTest, InsertTwice)
 {
-    Query q;
+    Storage s(1);
+    Query q(s);
     std::string id = "test_id";
     std::vector<float> vector1 = {1.0f};
     std::vector<float> vector2 = {2.0f};
@@ -27,7 +29,8 @@ TEST(QueryTest, InsertTwice)
 
 TEST(QueryTest, GetByIdNotFound)
 {
-    Query q;
+    Storage s(1);
+    Query q(s);
     auto vec = q.get_by_id("non_existent_id");
     EXPECT_FALSE(vec.has_value());
 }

@@ -4,6 +4,7 @@
 
 class Query {
 public:
+    Query(Storage s);
     void insert(const std::string& id, const std::vector<float>& values);
     std::optional<std::vector<float>> get_by_id(const std::string& id);
     std::vector<std::vector<float>> get_closest();

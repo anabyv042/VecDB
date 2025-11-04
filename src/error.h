@@ -1,5 +1,4 @@
 enum class ErrorCode {
     None,
-
-    VectorNotFound,
+    FileOpenError,
 };
