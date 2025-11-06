@@ -6,7 +6,7 @@ TEST(StorageTest, FlushesDataToDisk)
     Storage s(3);
     s.insert("vector1", {1.0f, 2.0f, 3.0f});
 
-    std::string filepath = "test_storage.vdb";
+    std::string filepath = "temp.vdb";
     ErrorCode ec = s.flush_to_disk(filepath);
     EXPECT_EQ(ec, ErrorCode::None);
 
