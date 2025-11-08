@@ -10,23 +10,6 @@ module;
 
 export module storage.page;
 
-/*
-Page structure:
-
-HEADER
-PageID - 4 bytes
-Dimensionality - 4 bytes
-Number of vectors in the page - 4 bytes
-
-METADATA
-For each vector:
-    VectorID - 8 bytes
-    Offset - 4 bytes
-
-DATA
-Vector data
-*/
-
 constexpr uint32_t PAGE_SIZE = 4096; // 4KB page size
 
 export class Page
