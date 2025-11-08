@@ -12,6 +12,7 @@ add_executable(vector-db
     src/main.cpp
     src/storage.cpp
     src/query.cpp
+    src/storage/page.ixx
 )
 
 # --- GoogleTest setup ---
@@ -34,8 +35,10 @@ enable_testing()
 add_executable(tests
     tests/test_query.cpp
     tests/test_storage.cpp
+    tests/storage/test_page.cpp
     src/query.cpp
     src/storage.cpp
+    src/storage/page.ixx
 )
 
 target_link_libraries(tests PRIVATE GTest::gtest_main)
