@@ -1,6 +1,6 @@
-import storage.page;
 #include <gtest/gtest.h>
 #include "../../src/error.h"
+#include "../../src/storage/page.h"
 
 TEST(PageTest, Insert)
 {
