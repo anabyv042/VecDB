@@ -12,14 +12,14 @@ public:
     void flush_to_disk(const std::string &file_path);
 
 private:
-    uint32_t _page_id;
-    uint32_t _dimensionality;
-    uint32_t _size_per_vector;
+    uint32_t page_id_;
+    uint32_t dimensionality_;
+    uint32_t size_per_vector_;
 
-    std::vector<std::byte> _raw_data;
-    uint32_t _metadata_offset;
-    uint32_t _data_offset;
-    std::unordered_map<uint64_t, uint32_t> _offset_map; // maps VectorID to offset in data section
+    std::vector<std::byte> raw_data_;
+    uint32_t metadata_offset_;
+    uint32_t data_offset_;
+    std::unordered_map<uint64_t, uint32_t> offset_map_; // maps VectorID to offset in data section
 
     void write_header();
     uint32_t header_size() const;
