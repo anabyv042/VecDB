@@ -34,6 +34,7 @@ Page::Page(const std::string& file_path) {
         throw error::FileOpenError(file_path);
     }
 
+    _raw_data.resize(PAGE_SIZE, std::byte{0});
     ifs.read(reinterpret_cast<char*>(_raw_data.data()), _raw_data.size());
 
     // read header
